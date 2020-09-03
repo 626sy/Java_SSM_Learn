@@ -3,13 +3,35 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--指定命名空间-->
-<mapper namespace="neusoft.dao.IUserDao">
+<mapper namespace="com.neusoft.dao.IUserDao">
 <!--        配置查询所有用户的sql-->
-    <select id="findAll" parameterType="INT" resultMap="userMap">
+
+    <!--&lt;!&ndash;    配置查询结果的列名和实体属性名的对应关系&ndash;&gt;-->
+    <!--    <resultMap id="userMap" type="uSeR">-->
+    <!--&lt;!&ndash;        主键字段的对应&ndash;&gt;-->
+    <!--        <id property="userId" column="id"></id>-->
+
+    <!--        <result property="userName" column="username"></result>-->
+    <!--        <result property="userAddress" column="address"></result>-->
+    <!--        <result property="userSex" column="sex"></result>-->
+    <!--        <result property="userBirthday" column="birthday"></result>-->
+    <!--    </resultMap>-->
+
+
+<!--    <select id="findById" parameterType="INT" resultMap="userMap">-->
+<!--        select * from user where id = #{uid}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;    配置查询所有用户的sql&ndash;&gt;-->
+<!--    <select id="findAll"  resultMap="userMap">-->
+<!--        select * from  user-->
+<!--    </select>-->
+
+    <select id="findById" parameterType="INT" resultType="neusoft.domain.User">
         select * from user where id = #{uid}
     </select>
 
-    <select id="findAll" resultMap="userMap">
+    <select id="findAll" resultType="neusoft.domain.User">
         select * from user
     </select>
 </mapper>

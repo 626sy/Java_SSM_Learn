@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface IUserDao {
     // 查询所有
-    @Select("select * from user")
-    public List<User> findAll();
+    // public List<User> findAll();
 }

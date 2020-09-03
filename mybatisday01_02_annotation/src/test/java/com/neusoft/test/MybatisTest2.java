@@ -1,7 +1,7 @@
 package com.neusoft.test;
 
 
-import com.neusoft.dao.IUserDao;
+import com.neusoft.dao.IUserDao1;
 import com.neusoft.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -28,7 +28,7 @@ public class MybatisTest2 {
         // 3、使用 工厂生产的SqlSession对象
         SqlSession session = factory.openSession();
         // 4、使用SqlSession 创建Dao 接口的代理对象
-        IUserDao userDao = session.getMapper(IUserDao.class);
+        IUserDao1 userDao = session.getMapper(IUserDao1.class);
         // 5、使用代理对象指向方法
         List<User> users = userDao.findAll();
         // 遍历

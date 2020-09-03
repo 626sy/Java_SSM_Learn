@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
-public interface IUserDao {
+public interface IUserDao1 {
     // 查询所有
     @Select("select * from user")
     List<User> findAll();

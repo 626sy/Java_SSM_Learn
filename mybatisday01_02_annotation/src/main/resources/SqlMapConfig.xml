@@ -23,6 +23,6 @@
 
     <!-- 告知mybatis配置的位置 -->
     <mappers>
-        <mapper class="com.neusoft.dao.IUserDao"></mapper>
+        <mapper class="com.neusoft.dao.IUserDao1"></mapper>
     </mappers>
 </configuration>

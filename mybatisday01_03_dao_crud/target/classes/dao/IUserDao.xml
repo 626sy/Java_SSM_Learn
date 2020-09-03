@@ -3,9 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--指定命名空间-->
-<mapper namespace="com.neusoft.dao.IUserDao">
+<mapper namespace="neusoft.dao.IUserDao">
 <!--        配置查询所有用户的sql-->
-    <select id="findAll" resultType="com.neusoft.domain.User">
+    <select id="findAll" parameterType="INT" resultMap="userMap">
+        select * from user where id = #{uid}
+    </select>
+
+    <select id="findAll" resultMap="userMap">
         select * from user
     </select>
 </mapper>

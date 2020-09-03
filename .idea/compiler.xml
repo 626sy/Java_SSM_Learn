@@ -13,6 +13,7 @@
     <bytecodeTargetLevel>
       <module name="mybatisday01_01_quich_start" target="1.5" />
       <module name="mybatisday01_02_annotation" target="1.5" />
+      <module name="mybatisday01_03_annotation" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

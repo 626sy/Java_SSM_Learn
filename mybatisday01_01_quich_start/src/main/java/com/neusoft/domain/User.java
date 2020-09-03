@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @author shihaobo
- * @date 2020/9/3 15:58
+ * @date 2020/9/3 9:46
  */
 public class User implements Serializable {
     private Integer id;

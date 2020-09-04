@@ -2,7 +2,6 @@ package test;
 
 import com.neusoft.dao.IUserDao;
 import com.neusoft.domain.User;
-import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,7 +10,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.jws.soap.SOAPBinding;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
@@ -21,7 +19,7 @@ import java.util.List;
  * @author Eric Lee
  * @date 2020/9/3 10:13
  */
-public class MybatisTest1 {
+public class MybatisTest2 {
     private  InputStream in;
     private  SqlSession sqlSession;
     private  IUserDao userDao;
@@ -45,62 +43,62 @@ public class MybatisTest1 {
         sqlSession.close();
         in.close();
     }
-//    @Test
-//    public void testFindAll(){
-//        List<User> users = userDao.findAll();
-//        for (User user : users){
-//            System.out.println(user);
-//        }
-//    }
+    @Test
+    public void testFindAll(){
+        List<User> users = userDao.findAll();
+        for (User user : users){
+            System.out.println(user);
+        }
+    }
 //
-//    @Test
-//    public void testFindOne(){
-//        User user = userDao.findById(45);
-//
-//         System.out.println(user);
-//
-//    }
+    @Test
+    public void testFindOne(){
+        User user = userDao.findById(45);
 
-//    @Test
-//    public void testSave(){
-//        // 注意要提交事物
-//        User user = new User();
-//        user.setUsername("李白");
-//        user.setBirthday(new Date());
-//        user.setSex("男");
-//        user.setAddress("王者峡谷打野区");
-//
-//        System.out.println("保存之前"+ user);
-//        int i = userDao.savaUser(user);
-//        System.out.println("影响的行数" + i);
-//        System.out.println("保存之后"+user);
-//        System.out.println(user.getId());
-//
-//    }
+         System.out.println(user);
 
+    }
 
-//    @Test
-//    public void testUpdate(){
-//        // 注意要提交事物
-//        User user = new User();
-//        user.setId(52);
-//        user.setUsername("李白");
-//        user.setBirthday(new Date());
-//        user.setSex("女");
-//        user.setAddress("东京");
-//
-//        System.out.println("更新之前"+ user);
-//        int i = userDao.updateUser(user);
-//        System.out.println("影响的行数" + i);
-//
-//    }
+    @Test
+    public void testSave(){
+        // 注意要提交事物
+        User user = new User();
+        user.setUserName("李白");
+        user.setUserBirthday(new Date());
+        user.setUserSex("男");
+        user.setUserAddress("王者峡谷打野区");
+
+        System.out.println("保存之前"+ user);
+        int i = userDao.savaUser(user);
+        System.out.println("影响的行数" + i);
+        System.out.println("保存之后"+user);
+        System.out.println(user.getUserId());
+
+    }
 
 
-//    @Test
-//    public void testDelete(){
-//        int res = userDao.deleteUser(52);
-//        System.out.println("res"+ res);
-//    }
+    @Test
+    public void testUpdate(){
+        // 注意要提交事物
+        User user = new User();
+        user.setUserId(55);
+        user.setUserName("大熊");
+        user.setUserBirthday(new Date());
+        user.setUserSex("男");
+        user.setUserAddress("东京");
+
+        System.out.println("更新之前"+ user);
+        int i = userDao.updateUser(user);
+        System.out.println("影响的行数" + i);
+
+    }
+
+
+    @Test
+    public void testDelete(){
+        int res = userDao.deleteUser(53);
+        System.out.println("res"+ res);
+    }
 
 
     @Test

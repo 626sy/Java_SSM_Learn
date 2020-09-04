@@ -8,44 +8,52 @@ import java.util.Date;
  * @date 2020/9/4 10:10
  */
 public class Emp implements Serializable {
-    private int empno;
-    private String ename;
-    private String job;
-    private int mgr;
+//    private int empno;
+//    private String ename;
+//    private String job;
+//    private int mgr;
+//    private Date hiredate;
+//    private int sal;
+//    private int comm;
+//    private int deptno;
+    private int emp_no ;
+    private String e_name;
+    private String e_job;
+    private Integer mgr;
     private Date hiredate;
     private int sal;
     private int comm;
-    private int deptno;
+    private int dept_no;
 
-    public int getEmpno() {
-        return empno;
+    public int getEmp_no() {
+        return emp_no;
     }
 
-    public void setEmpno(int empno) {
-        this.empno = empno;
+    public void setEmp_no(int emp_no) {
+        this.emp_no = emp_no;
     }
 
-    public String getEname() {
-        return ename;
+    public String getE_name() {
+        return e_name;
     }
 
-    public void setEname(String ename) {
-        this.ename = ename;
+    public void setE_name(String e_name) {
+        this.e_name = e_name;
     }
 
-    public String getJob() {
-        return job;
+    public String getE_job() {
+        return e_job;
     }
 
-    public void setJob(String job) {
-        this.job = job;
+    public void setE_job(String e_job) {
+        this.e_job = e_job;
     }
 
-    public int getMgr() {
+    public Integer getMgr() {
         return mgr;
     }
 
-    public void setMgr(int mgr) {
+    public void setMgr(Integer mgr) {
         this.mgr = mgr;
     }
 
@@ -53,8 +61,8 @@ public class Emp implements Serializable {
         return hiredate;
     }
 
-    public void setHiredate(Date hiredate) {
-        this.hiredate = hiredate;
+    public void setHiredate(Date hirdate) {
+        this.hiredate = hirdate;
     }
 
     public int getSal() {
@@ -73,25 +81,25 @@ public class Emp implements Serializable {
         this.comm = comm;
     }
 
-    public int getDeptno() {
-        return deptno;
+    public int getDept_no() {
+        return dept_no;
     }
 
-    public void setDeptno(int deptno) {
-        this.deptno = deptno;
+    public void setDept_no(int dept_no) {
+        this.dept_no = dept_no;
     }
 
     @Override
     public String toString() {
         return "Emp{" +
-                "empno=" + empno +
-                ", ename='" + ename + '\'' +
-                ", job='" + job + '\'' +
+                "emp_no=" + emp_no +
+                ", e_name='" + e_name + '\'' +
+                ", e_job='" + e_job + '\'' +
                 ", mgr=" + mgr +
-                ", hiredate=" + hiredate +
+                ", hirdate=" + hiredate +
                 ", sal=" + sal +
                 ", comm=" + comm +
-                ", deptno=" + deptno +
+                ", dept_no=" + dept_no +
                 '}';
     }
 }

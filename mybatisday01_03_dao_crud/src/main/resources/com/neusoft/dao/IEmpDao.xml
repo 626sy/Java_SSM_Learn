@@ -3,21 +3,53 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.dao.IEmpDao">
+
+    <resultMap id="empMap" type="Emp">
+        <id property="emp_no" column="empno"></id>
+        <result property="e_name" column="ename"></result>
+        <result property="e_job" column="job"></result>
+        <result property="mgr" column="mgr"></result>
+        <result property="hiredate" column="hiredate"></result>
+        <result property="sal" column="sal"></result>
+        <result property="comm" column="comm"></result>
+        <result property="dept_no" column="deptno"></result>
+    </resultMap>
+
+
+
+
 <!--    // 查询所有员工信息-->
-    <select id="findAll" resultType="com.neusoft.domain.Emp">
+    <select id="findAll" resultMap="empMap">
         select * from empl
     </select>
 <!--    查询根据empno-->
-    <select id="findByEmpno" resultType="com.neusoft.domain.Emp" parameterType="java.lang.Integer">
+    <select id="findByEmpno" resultMap="empMap" parameterType="java.lang.Integer">
         select * from empl where empno = #{empno}
     </select>
 <!--    //    增加保存用户-->
     <insert id="saveEmp" parameterType="com.neusoft.domain.Emp">
-        insert into empl(empno,ename,job,mgr,hiredate,sal,comm,deptno)
-        values (#{empno},#{ename},#{job},#{mgr},#{hiredate}.#{sal},#{comm},#{deptno});
+        <selectKey keyColumn="empno" keyProperty="emp_no" resultType="java.lang.Integer">
+            select  last_insert_id();
+        </selectKey>
+        insert into empl (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+         values (#{emp_no},#{e_name},#{e_job},#{mgr},#{hiredate},#{sal},#{comm},#{dept_no})
     </insert>
 <!--    更新用户-->
     <update id="updateEmp" parameterType="com.neusoft.domain.Emp">
-        update empl set   =  where ;
+        update empl set ename = #{e_name},job = #{e_job},mgr = #{mgr},hiredate = #{hiredate},
+        sal = #{sal},comm = #{comm},deptno = #{dept_no} where empno= #{emp_no};
     </update>
+<!--    删除用户-->
+    <delete id="deleteEmp" parameterType="java.lang.Integer">
+        delete from empl where empno = #{emp_no}
+    </delete>
+<!--    //    根据job进行模糊查询-->
+    <select id="findLikeJob" resultMap="empMap" parameterType="String">
+        select * from empl where job like #{e_job};
+    </select>
+
+<!--    //    查询总记录数-->
+    <select id="findTotal" resultType="java.lang.Integer">
+        select count(*) from empl;
+    </select>
 </mapper>

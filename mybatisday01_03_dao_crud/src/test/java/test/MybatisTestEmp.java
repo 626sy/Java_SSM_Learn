@@ -3,6 +3,7 @@ package test;
 
 import com.neusoft.dao.IEmpDao;
 import com.neusoft.domain.Emp;
+import com.neusoft.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -115,6 +116,18 @@ public class MybatisTestEmp {
     public void testCount(){
         int total = iEmpDao.findTotal();
         System.out.println(total);
+    }
+
+    // 根据传参条件多条件查询
+    @Test
+    public void testFindByCondition(){
+        Emp emp = new Emp();
+        emp.setE_job("CLERK");
+        emp.setDept_no(20);
+        List<Emp> emps = iEmpDao.findByCondition(emp);
+        for (Emp e:emps){
+            System.out.println(e);
+        }
     }
 
 }

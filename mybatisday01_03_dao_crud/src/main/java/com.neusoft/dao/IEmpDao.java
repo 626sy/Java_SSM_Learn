@@ -21,5 +21,7 @@ public interface IEmpDao {
     List<Emp> findLikeJob(String job);
     //    查询总记录数
     int findTotal();
+    //    多条件查询
+    List<Emp> findByCondition(Emp emp);
 
 }

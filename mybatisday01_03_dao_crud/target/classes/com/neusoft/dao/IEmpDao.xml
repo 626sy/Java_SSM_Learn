@@ -52,4 +52,19 @@
     <select id="findTotal" resultType="java.lang.Integer">
         select count(*) from empl;
     </select>
+
+<!--    根据传参条件多条件查询-->
+    <select id="findByCondition" resultMap="empMap" parameterType="emp">
+        select * from empl
+        <where>
+            <if test="e_job !=null">
+                and job = #{e_job}
+            </if>
+            <if test="dept_no !=null">
+                and deptno = #{dept_no}
+            </if>
+        </where>
+    </select>
+
+<!--    -->
 </mapper>

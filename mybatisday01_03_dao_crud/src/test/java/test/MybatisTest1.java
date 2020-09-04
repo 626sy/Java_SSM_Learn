@@ -74,11 +74,11 @@ public class MybatisTest1 {
             System.out.println(user);
         }
     }
-    @Test
-    public void testFindOne(){
-        User user = userDao.findById(45);
-        System.out.println(user);
-    }
+//    @Test
+//    public void testFindOne(){
+//        User user = userDao.findById(45);
+//        System.out.println(user);
+//    }
 
 
 

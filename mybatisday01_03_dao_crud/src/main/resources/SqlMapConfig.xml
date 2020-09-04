@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <!-- mybatis的主配置文件 -->
 <configuration>
-
+    
     <typeAliases>
-        <package name="neusoft.domain"/>
+        <package name="com.neusoft.domain"/>
     </typeAliases>
     <!-- 配置环境 -->
     <environments default="mysql">
@@ -27,6 +27,6 @@
 
     <!-- 指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件 -->
     <mappers>
-        <package name="neusoft.dao"/>
+        <package name="com.neusoft.dao"/>
     </mappers>
 </configuration>

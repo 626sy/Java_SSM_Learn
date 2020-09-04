@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.IEmpDao">
+<!--    // 查询所有员工信息-->
+    <select id="findAll" resultType="com.neusoft.domain.Emp">
+        select * from empl
+    </select>
+<!--    查询根据empno-->
+    <select id="findByEmpno" resultType="com.neusoft.domain.Emp" parameterType="java.lang.Integer">
+        select * from empl where empno = #{empno}
+    </select>
+</mapper>

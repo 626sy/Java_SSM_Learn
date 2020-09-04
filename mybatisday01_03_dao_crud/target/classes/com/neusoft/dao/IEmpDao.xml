@@ -27,7 +27,7 @@
         select * from empl where empno = #{empno}
     </select>
 <!--    //    增加保存用户-->
-    <insert id="saveEmp" parameterType="com.neusoft.domain.Emp">
+    <insert id="saveEmp" parameterType="emp">
         <selectKey keyColumn="empno" keyProperty="emp_no" resultType="java.lang.Integer">
             select  last_insert_id();
         </selectKey>
@@ -35,7 +35,7 @@
          values (#{emp_no},#{e_name},#{e_job},#{mgr},#{hiredate},#{sal},#{comm},#{dept_no})
     </insert>
 <!--    更新用户-->
-    <update id="updateEmp" parameterType="com.neusoft.domain.Emp">
+    <update id="updateEmp" parameterType="emp">
         update empl set ename = #{e_name},job = #{e_job},mgr = #{mgr},hiredate = #{hiredate},
         sal = #{sal},comm = #{comm},deptno = #{dept_no} where empno= #{emp_no};
     </update>

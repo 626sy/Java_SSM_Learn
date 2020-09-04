@@ -79,7 +79,7 @@ public class MybatisTestEmp {
     @Test
     public void testUpdateEmp(){
         Emp emp = new Emp();
-        emp.setEmp_no(9999);
+        emp.setEmp_no(10000);
         emp.setE_name("张飞");
         emp.setMgr(8888);
         emp.setE_job("SALESMAN");

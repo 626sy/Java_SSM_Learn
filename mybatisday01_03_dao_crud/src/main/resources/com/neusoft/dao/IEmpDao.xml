@@ -15,6 +15,10 @@
         <result property="dept_no" column="deptno"></result>
     </resultMap>
 
+    <sql id="defaultEmp">
+        select * from empl
+    </sql>
+
 
 
 
@@ -66,5 +70,24 @@
         </where>
     </select>
 
-<!--    -->
+<!--    select * from empl where empno like #{emp.emp_no};-->
+
+    <!--    多个 empno 数据模糊查询-->
+    <select id="findEmpByQueryVo" resultMap="empMap" parameterType="QueryVo">
+        select * from empl where empno like '%${emp.emp_no}%'
+    </select>
+
+<!--   ids -->
+    <select id="findEmpByIds" resultMap="empMap">
+        <include refid="defaultEmp"></include>
+        <where>
+            <if test="ids != null and ids.size() >0">
+                <foreach collection="ids" open="and empno in (" close=")" item="emp_no" separator=",">
+                    #{emp_no}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+
 </mapper>

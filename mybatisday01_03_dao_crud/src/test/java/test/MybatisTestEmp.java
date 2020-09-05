@@ -3,6 +3,7 @@ package test;
 
 import com.neusoft.dao.IEmpDao;
 import com.neusoft.domain.Emp;
+import com.neusoft.domain.QueryVo;
 import com.neusoft.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -11,9 +12,11 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -129,5 +132,35 @@ public class MybatisTestEmp {
             System.out.println(e);
         }
     }
+
+    // QueryVo  使用外部类进行模糊查询
+    @Test
+    public void testQueryVo(){
+        QueryVo queryVo = new QueryVo();
+        Emp emp = new Emp();
+        emp.setEmp_no(8);
+        queryVo.setEmp(emp);
+        List<Emp> emps = iEmpDao.findEmpByQueryVo(queryVo);
+        for (Emp e:emps){
+            System.out.println(e);
+        }
+
+    }
+
+    // 使用外部类    多条件查询
+    @Test
+    public void testFindids(){
+        QueryVo queryVo = new QueryVo();
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(10000);
+        list.add(8888);
+        list.add(7900);
+        queryVo.setIds(list);
+        List<Emp> emps = iEmpDao.findEmpByIds(queryVo);
+        for (Emp emp:emps){
+            System.out.println(emp);
+        }
+    }
+
 
 }

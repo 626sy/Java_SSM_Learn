@@ -1,6 +1,7 @@
 package com.neusoft.dao;
 
 import com.neusoft.domain.Emp;
+import com.neusoft.domain.QueryVo;
 import com.neusoft.domain.User;
 
 import java.util.List;
@@ -23,5 +24,9 @@ public interface IEmpDao {
     int findTotal();
     //    多条件查询
     List<Emp> findByCondition(Emp emp);
+    //    findByQueryVo
+    List<Emp> findEmpByQueryVo(QueryVo vo);
+    //
+    List<Emp> findEmpByIds(QueryVo vo);
 
 }

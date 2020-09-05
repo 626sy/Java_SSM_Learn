@@ -13,11 +13,11 @@ import java.util.List;
  * @date 2020/9/5 14:09
  */
 public class TestAccountService {
+    private ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
+    private IAccountService as = ac.getBean("accountService", IAccountService.class);
     // 查询所有
     @Test
     public void testFindAll(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IAccountService as = ac.getBean("accountService", IAccountService.class);
         List<Account> allAccount = as.findAllAccount();
         for (Account account:allAccount){
             System.out.println(account);
@@ -26,8 +26,6 @@ public class TestAccountService {
     // 根据id进行查询
     @Test
     public void testFindById(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IAccountService as = ac.getBean("accountService", IAccountService.class);
         Account account = new Account();
         account.setId(2);
         Account accountById = as.findAccountById(account.getId());
@@ -36,10 +34,8 @@ public class TestAccountService {
 
     @Test
     public void testSaveAccount(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IAccountService as = ac.getBean("accountService", IAccountService.class);
         Account account = new Account();
-        account.setId(4);
+//        account.setId(4);
         account.setName("ddd");
         account.setMoney(800f);
         as.saveAccount(account);
@@ -47,10 +43,8 @@ public class TestAccountService {
 
     @Test
     public void testUpdateAccount(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IAccountService as = ac.getBean("accountService", IAccountService.class);
         Account account = new Account();
-        account.setId(6);
+        account.setId(7);
         account.setName("fff");
         account.setMoney(1000f);
         as.updateAccount(account);
@@ -59,9 +53,7 @@ public class TestAccountService {
 
     @Test
     public void testDeleteAccount(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IAccountService as = ac.getBean("accountService", IAccountService.class);
-        as.deleteAccount(4);
+        as.deleteAccount(6);
     }
 
 }

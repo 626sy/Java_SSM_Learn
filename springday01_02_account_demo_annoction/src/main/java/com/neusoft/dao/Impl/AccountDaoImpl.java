@@ -5,8 +5,6 @@ import com.neusoft.domain.Account;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -15,9 +13,7 @@ import java.util.List;
  * @author shihaobo
  * @date 2020/9/5 11:10
  */
-@Repository("accountDao")
 public class AccountDaoImpl implements IAccountDao {
-    @Autowired
     private QueryRunner runner;
 
     public void setRunner(QueryRunner runner) {

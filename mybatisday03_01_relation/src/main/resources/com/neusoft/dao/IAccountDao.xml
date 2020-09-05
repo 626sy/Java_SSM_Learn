@@ -5,27 +5,39 @@
 <mapper namespace="com.neusoft.dao.IAccountDao">
 
 <!--&lt;!&ndash;    配置查询结果的列名和实体属性名的对应关系&ndash;&gt;-->
-<!--    id 给定一个唯一标识，是给select标签引用用的-->
-<!--    type 是指 实体类的全限定类名-->
+        <!--    id 给定一个唯一标识，是给select标签引用用的-->
+        <!--    type 是指 实体类的全限定类名-->
     <resultMap id="accountMap" type="account">
-<!--        id 标签 主键字段的对应-->
+        <!--        id 标签 主键字段的对应-->
+        <!--        用于指定非主键 ， column 是数据库中列名-->
+        <!--        property 用于指定实体类-->
         <id property="id" column="ID"></id>
-<!--        用于指定非主键 ， column 是数据库中列名-->
-<!--        property 用于指定实体类-->
         <result property="uid" column="UID"></result>
         <result property="money" column="MONEY"></result>
+<!--        指定一对一映射关系，配置user的内容-->
+        <association property="user" column="uid" javaType="user">
+            <id property="userId" column="id"></id>
+
+            <result property="userName" column="username"></result>
+            <result property="userAddress" column="address"></result>
+            <result property="userBirthday" column="birthday"></result>
+            <result property="userSex" column="sex"></result>
+
+        </association>
 
     </resultMap>
 
-<!--&lt;!&ndash;    查询所有&ndash;&gt;-->
-<!--    <select id="findAll" resultMap="accountMap">-->
-<!--        select * from account a,user u where u.id = a.UID-->
-<!--    </select>-->
+<!--    查询所有-->
+    <select id="findAll" resultMap="accountMap">
+        SELECT u.*,a.ID AS aid,a.MONEY from account a,user u WHERE u.id = a.uid;
+    </select>
 
     <!--    查询所有 带用户名和地址-->
     <select id="findAllAccount" resultType="accountUser">
         select a.*,u.username,u.address from account a,user u where u.id = a.UID;
     </select>
+
+    <!--    更新-->
 
 
 

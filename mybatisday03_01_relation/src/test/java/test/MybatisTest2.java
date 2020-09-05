@@ -1,6 +1,8 @@
 package test;
 
+import com.neusoft.dao.IAccountDao;
 import com.neusoft.dao.IUserDao;
+import com.neusoft.domain.AccountUser;
 import com.neusoft.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -23,6 +25,7 @@ public class MybatisTest2 {
     private  InputStream in;
     private  SqlSession sqlSession;
     private  IUserDao userDao;
+    private IAccountDao accountDao;
     // 在测试方法之前执行u
     @Before
     public void init() throws IOException {
@@ -34,7 +37,8 @@ public class MybatisTest2 {
         // 3. 使用 工厂生产的 SqlSession对象
         sqlSession = factory.openSession();
         // 4. 使用SqlSession 创建Dao 接口 的代理对象
-        userDao = sqlSession.getMapper(IUserDao.class);
+//        userDao = sqlSession.getMapper(IUserDao.class);
+        accountDao = sqlSession.getMapper(IAccountDao.class);
     }
     @After
     public void destroy() throws IOException {
@@ -43,7 +47,8 @@ public class MybatisTest2 {
         sqlSession.close();
         in.close();
     }
-    @Test
+
+ /*   @Test
     public void testFindAll(){
         List<User> users = userDao.findAll();
         for (User user : users){
@@ -107,7 +112,7 @@ public class MybatisTest2 {
         for(User user: users){
             System.out.println(user);
         }
-    }
+    }*/
 
 
 //    @Test
@@ -115,5 +120,14 @@ public class MybatisTest2 {
 //        int total = userDao.findTotal();
 //        System.out.println(total);
 //    }
+
+    @Test
+    public void testFindAllAccount(){
+
+        List<AccountUser> aus = accountDao.findAllAccount();
+        for (AccountUser au:aus){
+            System.out.println(au);
+        }
+    }
 
 }

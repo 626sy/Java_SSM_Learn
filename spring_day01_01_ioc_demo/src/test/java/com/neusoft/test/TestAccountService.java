@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class TestAccountService {
     private ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-    private IAccountService as = ac.getBean("accountService", IAccountService.class);
+    private IAccountService as = ac.getBean("accountServiceImpl", IAccountService.class);
     // 查询所有
     @Test
     public void testFindAll(){

@@ -23,7 +23,7 @@
     <!--    配置数据源-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/java9_sprng"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/java9_spring"></property>
         <property name="user" value="root"></property>
         <property name="password" value="root"></property>
     </bean>

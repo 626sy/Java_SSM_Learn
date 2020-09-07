@@ -48,6 +48,7 @@ public class JdbcConfig {
             return ds;
         } catch (Exception e) {
             e.printStackTrace();
+            // 抛出运行时异常
             throw new RuntimeException(e);
         }
 

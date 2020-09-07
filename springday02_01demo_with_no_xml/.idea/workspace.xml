@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74778595-09c4-43cf-8dac-60a9e9be4734" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/neusoft/test/TestQueryRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/neusoft/config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neusoft/config/JdbcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neusoft/config/SpringConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neusoft/config/SpringConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/neusoft/test/TestAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/neusoft/test/TestAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +51,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2477876" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599443947924</updated>
-      <workItem from="1599443954282" duration="2366000" />
+      <workItem from="1599443954282" duration="3666000" />
     </task>
     <servers />
   </component>
@@ -107,9 +110,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1599446349446" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1599446317729">
+    <state width="723" height="376" key="GridCell.Tab.0.bottom" timestamp="1599447098745">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599446317729" />
+    <state width="723" height="376" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599447098745" />
+    <state width="723" height="376" key="GridCell.Tab.0.center" timestamp="1599447098745">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="723" height="376" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599447098745" />
+    <state width="723" height="376" key="GridCell.Tab.0.left" timestamp="1599447098745">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="723" height="376" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599447098745" />
+    <state width="723" height="376" key="GridCell.Tab.0.right" timestamp="1599447098745">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="723" height="376" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599447098745" />
+    <state x="425" y="56" key="SettingsEditor" timestamp="1599446933853">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="56" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599446933853" />
   </component>
 </project>

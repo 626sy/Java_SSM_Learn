@@ -1,10 +1,15 @@
 package com.neusoft.test;
 
+import com.neusoft.config.SpringConfiguration;
 import com.neusoft.domain.Account;
 import com.neusoft.service.IAccountService;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
@@ -12,11 +17,22 @@ import java.util.List;
  * @author Eric Lee
  * @date 2020/9/5 14:09
  */
-public class TestAccountService {
+//使用注解的方式加载junit单元测试
+    // spring整理junit配置
+// RunWith:指定测试类
+@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations = "bean.xml")
+// ContextConfiguration：当不适应xml配置时，需要用此属性指定注解类的位置
+@ContextConfiguration(classes = SpringConfiguration.class)
 
-    ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
+
+public class TestAccountService {
+    @Autowired
+    private IAccountService as = null;
+
+/*    ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
 //    IAccountService as = ac.getBean("accountService", IAccountService.class);
-    IAccountService as = ac.getBean("accountServiceImpl", IAccountService.class);
+    IAccountService as = ac.getBean("accountServiceImpl", IAccountService.class);*/
 
     @Test
     public void testFindAll() {
@@ -27,35 +43,36 @@ public class TestAccountService {
             System.out.println(account);
         }
     }
+//
+//    @Test
+//    public void testFindOne() {
+//        //3.执行方法
+//        Account account = as.findAccountById(1);
+//        System.out.println(account);
+//    }
+//
+//    @Test
+//    public void testSave() {
+//        Account account = new Account();
+//        account.setName("test");
+//        account.setMoney(12345f);
+//        //3.执行方法
+//        as.saveAccount(account);
+//
+//    }
+//
+//    @Test
+//    public void testUpdate() {
+//        //3.执行方法
+//        Account account = as.findAccountById(4);
+//        account.setMoney(23456f);
+//        as.updateAccount(account);
+//    }
+//
+//    @Test
+//    public void testDelete() {
+//        //3.执行方法
+//        as.deleteAccount(4);
+//    }
 
-    @Test
-    public void testFindOne() {
-        //3.执行方法
-        Account account = as.findAccountById(1);
-        System.out.println(account);
-    }
-
-    @Test
-    public void testSave() {
-        Account account = new Account();
-        account.setName("test");
-        account.setMoney(12345f);
-        //3.执行方法
-        as.saveAccount(account);
-
-    }
-
-    @Test
-    public void testUpdate() {
-        //3.执行方法
-        Account account = as.findAccountById(4);
-        account.setMoney(23456f);
-        as.updateAccount(account);
-    }
-
-    @Test
-    public void testDelete() {
-        //3.执行方法
-        as.deleteAccount(4);
-    }
 }

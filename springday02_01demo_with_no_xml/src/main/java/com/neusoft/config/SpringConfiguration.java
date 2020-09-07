@@ -26,10 +26,14 @@ import org.springframework.context.annotation.PropertySource;
 //PropertySource
 // 指定Properties 文件的位置
 //    属性 文件的名称和路径   classpath 表示类路径
+
+//     ComponentScan：用于指定Spring在初始化容器时要扫描的包，作用和在Spring的xml
+//                    配置文件中的一样
 //@ComponentScan(basePackages="com.neusoft")
 //@ComponentScan({"com.neusoft"})
 @ComponentScan("com.neusoft")
 @Import(JdbcConfig.class)
+// PropertySource：用于加载properties文件中的配置
 @PropertySource("classpath:jdbcConfig.properties")
 public class SpringConfiguration {
 }

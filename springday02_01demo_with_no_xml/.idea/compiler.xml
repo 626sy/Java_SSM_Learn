@@ -9,5 +9,6 @@
         <module name="springday02_01demo_with_no_xml" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

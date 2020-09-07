@@ -14,6 +14,7 @@ import java.util.List;
  * @date 2020/9/5 11:10
  */
 public class AccountDaoImpl implements IAccountDao {
+
     private QueryRunner runner;
 
     public void setRunner(QueryRunner runner) {

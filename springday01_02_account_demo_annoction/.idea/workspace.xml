@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67d65f26-4851-4e37-81a4-c710f81ed3c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/springday02_01demo_with_no_xml.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/config/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/config/SpringConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/dao/IAccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/dao/Impl/AccountDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/service/IAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/java/com/neusoft/service/Impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/src/test/java/com/neusoft/test/TestAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springday02_01demo_with_no_xml/target/classes/bean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_day01_01_ioc_demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_day01_01_ioc_demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +41,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -72,6 +56,7 @@
       <workItem from="1599289911517" duration="3313000" />
       <workItem from="1599439567707" duration="1239000" />
       <workItem from="1599441140026" duration="626000" />
+      <workItem from="1599443273575" duration="206000" />
     </task>
     <servers />
   </component>
@@ -90,6 +75,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1599439880110" />
+    <state x="272" y="62" key="SettingsEditor" timestamp="1599443481371">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599443481371" />
     <state x="178" y="121" key="new project wizard" timestamp="1599439883335">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -3,6 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    告知spring在创建容器时要扫的包
+        将对象交给spring去管理，指定扫描的包名-->
+
 <!--    配置service-->
     <bean id="accountService" class="com.neusoft.service.Impl.AccountServiceImpl">
         <property name="accountDao" ref="accountDao"></property>

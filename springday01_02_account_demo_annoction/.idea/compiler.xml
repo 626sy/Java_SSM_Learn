@@ -9,5 +9,6 @@
         <module name="springday01_02_account_demo_annoction" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

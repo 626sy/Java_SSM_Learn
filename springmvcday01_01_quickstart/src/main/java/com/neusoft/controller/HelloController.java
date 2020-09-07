@@ -13,6 +13,8 @@ public class HelloController {
     @RequestMapping(path = "/hello")
     public String sayHello(){
         System.out.println("Hello Controller");
+        // 调用service
+        // req.setattribute
         return "success";
     }
 
@@ -22,7 +24,15 @@ public class HelloController {
         return "success";
     }
 
-    @RequestMapping(value = "/testRequestMapping",params = "username", headers = {"Accept"})
+    @RequestMapping(path = "/hehe")
+    public String sayHello2(){
+        System.out.println("Hello controller");
+        System.out.println("hehe");
+        return "success";
+    }
+
+
+    @RequestMapping(value = "/testRequestMapping",params = {"username=hehe"}, headers = {"Accept"})
     public String testRequestMapping(){
         System.out.println("testRequestMapping.....");
         return "success";

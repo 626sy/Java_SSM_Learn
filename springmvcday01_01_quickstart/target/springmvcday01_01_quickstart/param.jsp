@@ -25,16 +25,16 @@
 
 <hr>
 
-<form action="/param/saveAccount" method="post">
-    姓名： <input type="text" name="username">
-    密码： <input type="text" name="password">
-    金额： <input type="text" name="money">
-    用户姓名： <input type="text" name="list[0].uname">
-    用户年龄： <input type="text" name="list[0].age">
-    用户姓名： <input type="text" name="map['first].uname">
-    用户年龄： <input type="text" name="map['first].age">
-    <input type="submit" value="提交">
-</form>
+<%--<form action="/param/saveAccount" method="post">--%>
+<%--    姓名： <input type="text" name="username">--%>
+<%--    密码： <input type="text" name="password">--%>
+<%--    金额： <input type="text" name="money">--%>
+<%--    用户姓名： <input type="text" name="list[0].uname">--%>
+<%--    用户年龄： <input type="text" name="list[0].age">--%>
+<%--    用户姓名： <input type="text" name="map['first].uname">--%>
+<%--    用户年龄： <input type="text" name="map['first].age">--%>
+<%--    <input type="submit" value="提交">--%>
+<%--</form>--%>
 
 <br>
 <form action="/param/saveUser" method="post">
@@ -44,5 +44,7 @@
     用户生日： <input type="text" name="date">
     <input type="submit" value="提交">
 </form>
+
+<a href="/param/testServlet?hehe='xixi'">servlet原生API</a>
 </body>
 </html>

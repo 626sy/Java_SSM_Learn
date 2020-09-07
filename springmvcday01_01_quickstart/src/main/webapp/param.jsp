@@ -44,5 +44,7 @@
     用户生日： <input type="text" name="date">
     <input type="submit" value="提交">
 </form>
+
+<a href="/param/testServlet?hehe='xixi'">servlet原生API</a>
 </body>
 </html>

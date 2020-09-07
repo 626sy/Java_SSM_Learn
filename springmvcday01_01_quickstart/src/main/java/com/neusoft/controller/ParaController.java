@@ -5,6 +5,9 @@ import com.neusoft.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @author shihaobo
  * @date 2020/9/7 15:31
@@ -34,6 +37,16 @@ public class ParaController {
     public String testParam(User user){
         System.out.println("saveUser");
         System.out.println(user);
+        return "success";
+    }
+
+    // 原生servletAPI的使用
+    @RequestMapping("/testServlet")
+    public String testServlet(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("testServlet");
+        System.out.println(request);
+        String hehe = request.getParameter("hehe");
+        System.out.println(hehe);
         return "success";
     }
 

@@ -20,6 +20,14 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+<!--    配置 自定义类型转换器-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean" >
+        <property name="converters">
+            <set>
+                <bean class="com.neusoft.utils.StringToDateConveter"></bean>
+            </set>
+        </property>
+    </bean>
 <!--开启spring注解支持-->
     <mvc:annotation-driven/>
 </beans>

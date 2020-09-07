@@ -15,4 +15,17 @@ public class HelloController {
         System.out.println("Hello Controller");
         return "success";
     }
+
+    @RequestMapping(path = "/hello1")
+    public String sayHello1(){
+        System.out.println("sayHello1");
+        return "success";
+    }
+
+    @RequestMapping(value = "/testRequestMapping",params = "username", headers = {"Accept"})
+    public String testRequestMapping(){
+        System.out.println("testRequestMapping.....");
+        return "success";
+    }
+
 }

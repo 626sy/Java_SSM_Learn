@@ -4,6 +4,7 @@ import com.neusoft.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -41,5 +42,27 @@ public class UserController {
 
         response.getWriter().write("你好啊");
         return;
+    }
+
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView(){
+        System.out.println("testModelAndView........");
+        ModelAndView mv = new ModelAndView();
+        User user = new User();
+        // 假装么 这只调用service查出的结果
+        user.setUsername("张无忌");
+        user.setPassword("456");
+        user.setAge(16);
+
+        mv.addObject("user",user);
+        mv.setViewName("success");
+        return mv;
+
+    }
+
+    @RequestMapping("/test")
+    public String testFOR(){
+        System.out.println("testFOR...");
+        return "redirect:/index.jsp";
     }
 }

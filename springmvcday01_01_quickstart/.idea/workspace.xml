@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffa14461-109b-4d9a-bed0-9dfe0fbc2e5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/neusoft/controller/AnnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neusoft/controller/AnnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/anno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/anno.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springmvcday01_01_quickstart/anno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvcday01_01_quickstart/anno.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +228,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -250,7 +247,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599461310157</updated>
-      <workItem from="1599461313747" duration="12887000" />
+      <workItem from="1599461313747" duration="13172000" />
     </task>
     <servers />
   </component>

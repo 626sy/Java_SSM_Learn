@@ -17,7 +17,7 @@ public class AnnoController {
     public String testRequestParam(@RequestParam(name = "name") String username,
                                    @RequestParam(value = "pass",required = false) String password){
         // 作用:把请求中的指定名称的参数传递给控制器中的形参赋值
-
+        // value:请求参数中的名称[默认name和value可以省略]
         // required:请求参数值是否必须提供此参数,默认值是true,必须提供
     // 报错:Required String parameter 'name' is not present
 //    public String testRequestParam(@RequestParam("name") String username){

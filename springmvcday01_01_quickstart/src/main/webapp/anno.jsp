@@ -18,5 +18,8 @@
     密码： <input type="text" name="password">
     <input type="submit" value="提交">
 </form>
+
+testPathVarible
+<a href="/anno/testPathVarible/3">testPathVarible</a>
 </body>
 </html>

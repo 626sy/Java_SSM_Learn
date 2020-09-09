@@ -30,4 +30,11 @@ public class AccountServiceImpl implements AccountService {
 
         accountDao.saveAccount(account);
     }
+
+    @Override
+    public void updateAccount(Integer id) {
+        System.out.println("业务层更改账户");
+
+        accountDao.updateAccount(id);
+    }
 }

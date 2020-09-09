@@ -36,9 +36,14 @@ public class AccountController {
 
     @RequestMapping("/save")
     public void save(Account account, HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-
         accountService.saveAccount(account);
+        response.sendRedirect(request.getContextPath()+"/account/findAll");
+        return;
+    }
+
+    @RequestMapping("/update")
+    public void update(Integer id,HttpServletRequest request, HttpServletResponse response) throws IOException {
+        accountService.updateAccount(id);
         response.sendRedirect(request.getContextPath()+"/account/findAll");
         return;
     }

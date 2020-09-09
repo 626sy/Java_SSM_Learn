@@ -42,8 +42,14 @@ public class AccountController {
     }
 
     @RequestMapping("/update")
-    public void update(Integer id,HttpServletRequest request, HttpServletResponse response) throws IOException {
-        accountService.updateAccount(id);
+    public void update(Account account,HttpServletRequest request, HttpServletResponse response) throws IOException {
+        accountService.updateAccount(account);
+        response.sendRedirect(request.getContextPath()+"/account/findAll");
+        return;
+    }
+    @RequestMapping("/delete")
+    public void delete(Account account,HttpServletRequest request,HttpServletResponse response) throws IOException {
+        accountService.deleteAccount(account);
         response.sendRedirect(request.getContextPath()+"/account/findAll");
         return;
     }

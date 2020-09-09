@@ -6,12 +6,12 @@
 
 <h3>添加账户</h3>
 <form action="account/save">
-    姓名： <input type="text" name="username"> <br>
-    金额： <input type="text" name="usermoney"> <br>
+    姓名： <input type="text" name="name"> <br>
+    金额： <input type="text" name="money"> <br>
     <input type="submit" value="保存">
 </form>
 
-<img src="images/baidu.png">
+<%--<img src="images/baidu.png">--%>
 
 <h3>更新账户</h3>
 <form action="account/update">
@@ -21,5 +21,10 @@
     <input type="submit" value="更新">
 </form>
 
+<h3>删除</h3>
+<form action="/account/delete">
+    id: <input type="text" name="id">
+    <input type="submit" value="删除">
+</form>
 </body>
 </html>

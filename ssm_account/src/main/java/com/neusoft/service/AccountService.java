@@ -10,6 +10,8 @@ public interface AccountService {
 
     public void saveAccount(Account account);
 
-    public void updateAccount(Integer id);
+    public void updateAccount(Account account);
+
+    public void deleteAccount(Account account);
 
 }

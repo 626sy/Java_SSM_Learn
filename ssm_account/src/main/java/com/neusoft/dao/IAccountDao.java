@@ -17,7 +17,9 @@ public interface IAccountDao {
     @Select("insert into account(name, money) values (#{name},#{money})")
     public void saveAccount(Account account);
     // 修改账户
-    @Update("update account set name = #{name} ,money=#{money} where id=#{id}")
-    public void updateAccount(Integer id);
+    @Select("update account set name=#{name},money=#{money} where id=#{id}")
+    public void updateAccount(Account account);
     // 删除账户
+    @Select("delete from account where id = #{id}")
+    public void deleteAccount(Account account);
 }

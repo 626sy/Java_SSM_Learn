@@ -32,9 +32,19 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void updateAccount(Integer id) {
+    public void updateAccount(Account account) {
         System.out.println("业务层更改账户");
 
-        accountDao.updateAccount(id);
+        accountDao.updateAccount(account);
     }
+
+    @Override
+    public void deleteAccount(Account account) {
+        System.out.println("业务层删除账户");
+
+        accountDao.deleteAccount(account);
+
+    }
+
+
 }

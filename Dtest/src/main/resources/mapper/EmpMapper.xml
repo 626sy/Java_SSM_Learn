@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.po.Emp">
+    <select id="getEmp" resultType="org.example.po.Emp">
+        select * from emp where emp.empid = 1
+    </select>
+    <select id="getEmp2" resultType="org.example.po.Emp">
+        select * from emp;
+    </select>
+    
+    <insert id="addEmp" parameterType="org.example.po.Emp">
+        insert into emp (ename,logid) values (#{ename},#{logid});
+    </insert>
+    
+    <update id="updateEmp" parameterType="org.example.po.Emp">
+        update emp set ename=#{ename} where empid = #{empid};
+    </update>
+
+    <delete id="removeEmp" parameterType="java.lang.Integer">
+        delete from emp where empid = #{empid};
+    </delete>
+<!--    模糊查询-->
+    <select id="likeEmp" resultType="org.example.po.Emp" parameterType="java.lang.String">
+        select * from emp where ename like #{ename};
+    </select>
+    
+</mapper>

@@ -35,24 +35,24 @@ public class test {
         sqlSession.close();
         inputStream.close();
     }
-    // 查询一个
-//    @Test
-//    public void testSelectOne(){
-//        Emp e = sqlSession.selectOne("org.example.po.Emp.getEmp");
-//        System.out.println(e);
-//    }
+//     查询一个
+/*    @Test
+    public void testSelectOne(){
+        Emp e = sqlSession.selectOne("org.example.po.Emp.getEmp");
+        System.out.println(e);
+    }
 
-//    @Test
-//    public void testSelectAll(){
-//        List<Emp> list = sqlSession.selectList("org.example.po.Emp.getEmp2");
-////        for (Emp emp:list){
-////            System.out.println(emp);
-////        }
-//        for (int i = 0; i < list.size(); i++) {
-//            System.out.println(list.get(i));
+    @Test
+    public void testSelectAll(){
+        List<Emp> list = sqlSession.selectList("org.example.po.Emp.getEmp2");
+//        for (Emp emp:list){
+//            System.out.println(emp);
 //        }
-//        System.out.println(list);
-//    }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        System.out.println(list);
+    }
 
     @Test
     public void testInsert(){
@@ -88,5 +88,11 @@ public class test {
         for (Emp e:list){
             System.out.println(e);
         }
+    }*/
+
+    @Test
+    public void SelectDept(){
+        List<Object> list = sqlSession.selectList("org.example.po.Dept.getAll");
+        System.out.println(list);
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.po.Dept">
+    <resultMap id="empByDept" type="org.example.po.Dept">
+        <id property="deptid" column="deptid"></id>
+        <collection property="les" ofType="org.example.po.Emp">
+            <id column="empid" property="empid"></id>
+            <result column="ename" property="ename"></result>
+        </collection>
+    </resultMap>
+    <select id="getAll" resultMap="empByDept">
+        select e.*,d.dname from emp e INNER JOIN dept1 d ON e.deptid = d.deptid WHERE d.dname = "医疗";
+    </select>
+
+    
+</mapper>

@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.po.Emp">
+    <resultMap id="getEmpmo" type="org.example.po.Emp">
+        <id property="empid" column="empid"></id>
+        <result property="ename" column="ename"></result>
+        <association property="dept" javaType="org.example.po.Dept">
+            <id column="deptid" property="deptid"></id>
+            <result property="dname" column="dname"></result>
+        </association>
+    </resultMap>
+
     <select id="getEmp" resultType="org.example.po.Emp">
         select * from emp where emp.empid = 1
     </select>

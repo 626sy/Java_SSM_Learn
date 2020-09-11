@@ -21,8 +21,17 @@ public class Emp {
     private String logid;
     private String logpwd;
     private int mgrid;
+    private Dept dept;
 
     public Emp() {
+    }
+
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
     }
 
     public Emp(int empid, String ename, Date hiredate, String logid, String logpwd, int mgrid) {

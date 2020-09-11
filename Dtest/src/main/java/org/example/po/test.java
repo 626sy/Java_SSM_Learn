@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author shihaobo
@@ -94,5 +95,12 @@ public class test {
     public void SelectDept(){
         List<Object> list = sqlSession.selectList("org.example.po.Dept.getAll");
         System.out.println(list);
+    }
+    @Test
+    public void SelectDuoToDuo(){
+        List<Object> list = sqlSession.selectList("org.example.po.Dept.getAllTwo");
+        for (Object list1:list){
+            System.out.println(list1);
+        }
     }
 }

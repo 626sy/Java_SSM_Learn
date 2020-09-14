@@ -1,17 +1,28 @@
 package com.neusoft.po;
 
 import com.neusoft.service.EmpService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author shihaobo
  * @date 2020/9/14 9:55
  */
 public class Emp {
-    public static void main(String[] args) {
-        Emp emp = new Emp();    // 构建
-        String s = emp.toString();  // 使用
-        EmpService empService = new EmpService();
+    private Dept dept;
 
-        empService.addEmp();
+    public Dept getDept() {
+        return dept;
+    }
+    public void setDept(Dept dept) {
+        this.dept = dept;
+    }
+
+    public static void main(String[] args) {
+        ApplicationContext factory = new ClassPathXmlApplicationContext(
+                "application-context.xml"
+        );
+        factory.getBean("emp");
+
     }
 }

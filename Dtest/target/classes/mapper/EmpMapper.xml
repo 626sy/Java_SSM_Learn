@@ -11,6 +11,10 @@
         </association>
     </resultMap>
 
+    <select id="getEmp1" resultMap="getEmpmo" >
+        select e.*,d.* from emp e inner join dept1 d on e.deptid = d.deptid where e.empid =5;
+    </select>
+
     <select id="getEmp" resultType="org.example.po.Emp">
         select * from emp where emp.empid = 1
     </select>

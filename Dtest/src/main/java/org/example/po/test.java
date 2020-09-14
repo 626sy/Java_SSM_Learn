@@ -97,6 +97,12 @@ public class test {
         System.out.println(list);
     }
     @Test
+    public void SelectDToOne(){
+        List<Object> list = sqlSession.selectList("org.example.po.Emp.getEmp1");
+        System.out.println(list);
+    }
+
+    @Test
     public void SelectDuoToDuo(){
         List<Object> list = sqlSession.selectList("org.example.po.Dept.getAllTwo");
         for (Object list1:list){

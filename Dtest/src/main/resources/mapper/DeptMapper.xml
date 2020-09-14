@@ -15,10 +15,9 @@
     <select id="getAll" resultMap="empByDept">
         select e.*,d.dname from emp e INNER JOIN dept1 d ON e.deptid = d.deptid WHERE d.dname = "医疗";
     </select>
+
     <select id="getAllTwo" resultMap="empByDept">
         SELECT e.*,o.* FROM emp e inner JOIN emp2obj e2o on e.empid = e2o.empid
         INNER JOIN obj o on o.objid = e2o.objid;
     </select>
-
-    
 </mapper>

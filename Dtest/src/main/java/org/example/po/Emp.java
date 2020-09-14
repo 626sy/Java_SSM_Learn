@@ -34,15 +34,6 @@ public class Emp {
         this.dept = dept;
     }
 
-    public Emp(int empid, String ename, Date hiredate, String logid, String logpwd, int mgrid) {
-        this.empid = empid;
-        this.ename = ename;
-        this.hiredate = hiredate;
-        this.logid = logid;
-        this.logpwd = logpwd;
-        this.mgrid = mgrid;
-    }
-
     public int getEmpid() {
         return empid;
     }
@@ -100,6 +91,7 @@ public class Emp {
                 ", logid='" + logid + '\'' +
                 ", logpwd='" + logpwd + '\'' +
                 ", mgrid=" + mgrid +
+                ", dept=" + dept +
                 '}';
     }
 }

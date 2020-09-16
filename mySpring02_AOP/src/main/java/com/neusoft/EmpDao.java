@@ -12,11 +12,15 @@ public class EmpDao implements IEmpDao {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
         IEmpDao empDao =(IEmpDao) context.getBean("empDao");
-        empDao.modEmp();
-
+//        empDao.modEmp();
+        empDao.addEmp();
     }
+
     @Override
     public void addEmp() {
+        int i = 0;
+        int j = 0;
+//        j = 1/i;
         System.out.println("-------public void addEmp()----------");
     }
 

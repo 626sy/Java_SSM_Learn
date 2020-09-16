@@ -10,17 +10,32 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd
 ">
+    <aop:aspectj-autoproxy/>
     <bean class="com.neusoft.EmpDao" id="empDao"></bean>
     <bean class="com.neusoft.Qiemian" id="qiemian"></bean>
 
+<!--
     <aop:config>
         <aop:aspect ref="qiemian">
             <aop:pointcut id="alladdmethod" expression="execution(* com.neusoft.*.add*(..))"/>
             <aop:pointcut id="allmodmethod" expression="execution(* com.neusoft.EmpDao.mod*(..))"/>
 
+&lt;!&ndash;            <aop:before method="qianZhi2" pointcut-ref="alladdmethod"></aop:before>&ndash;&gt;
+&lt;!&ndash;            <aop:before method="qianZhi1" pointcut-ref="alladdmethod"></aop:before>&ndash;&gt;
+&lt;!&ndash;            <aop:before method="qianZhi" pointcut-ref="alladdmethod"></aop:before>&ndash;&gt;
+&lt;!&ndash;            <aop:after-returning method="houZhi"  returning="rtv" pointcut-ref="alladdmethod"></aop:after-returning>&ndash;&gt;
+&lt;!&ndash;            <aop:after-throwing throwing="ex" method="yiChang" pointcut-ref="alladdmethod"></aop:after-throwing>&ndash;&gt;
+&lt;!&ndash;            <aop:after method="zuiZhong" pointcut-ref="alladdmethod"></aop:after>&ndash;&gt;
+&lt;!&ndash;            <aop:around method="huanRao" pointcut-ref="alladdmethod"></aop:around>&ndash;&gt;
 
-            <aop:before method="qianZhi" pointcut-ref="alladdmethod"></aop:before>
-            <aop:after-returning method="houZhi"  returning="rtv" pointcut-ref="allmodmethod"></aop:after-returning>
+&lt;!&ndash;
+1、前置永远在join point方法之前执行
+2、after*永远在join point方法之后执行
+3、前部分参考相对于before的定义顺序，后半部分参考和after*的定义顺序
+4、最后是从上到下
+&ndash;&gt;
+
         </aop:aspect>
     </aop:config>
+-->
 </beans>

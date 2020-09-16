@@ -8,6 +8,6 @@ public interface IEmpService {
     public int addEmp(Emp emp);
     public int modEmp(Emp emp);
     public int delEmp(int empid);
-    public List<Emp> allEmp(Emp emp);
+    public List<Emp> allEmp();
     public Emp getEmp(int empid);
 }

@@ -25,7 +25,7 @@ public class IEmpServiceImpl implements IEmpService {
         IEmpService empService = (IEmpService) context.getBean("empService");
         Emp e = new Emp();
         e.setEname("扎西德勒");
-        empService.addEmp(e );
+        empService.addEmp(e);
     }
 
 
@@ -49,8 +49,6 @@ public class IEmpServiceImpl implements IEmpService {
         dept.setDname("test1");
         //传播事务
         deptMapper.addDept(dept);
-
-
         //提交事务
         return i;
     }

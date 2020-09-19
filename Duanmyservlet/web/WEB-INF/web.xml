@@ -3,14 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-<!--    对象的实例化，对象交给Servlet容器管理
+<!--    <servlet>的核心目的：对象的实例化，对象交给Servlet容器管理
         HelloController h = new HelloController()
-        反射 字符串形式的完整类名，只能调用类的默认无参数构造方法
-
+        不使用上面的实例化时，可用反射技术 ，使用时需要字符串形式的完整类名，反射时只能调用类的默认无参数构造方法
 -->
+<!--    以下及ServletConfig-->
     <servlet>
         <servlet-name>helloController</servlet-name>
         <servlet-class>com.neusoft.controller.HelloController</servlet-class>
+        <init-param>
+            <param-name>woman</param-name>
+            <param-value>12345</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>helloController</servlet-name>
